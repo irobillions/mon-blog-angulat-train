@@ -1,0 +1,20 @@
+<li (click)="onViewPost(indexOfPost)"
+    [ngClass]="{'list-group-item': true,
+               'list-group-item-success': post.LoveIts > 0,
+               'list-group-item-danger': post.LoveIts < 0}">
+  <h3 class="list-group-item-heading">
+    <strong class="text-capitalize">{{ post.title }}</strong> |
+    <span class="glyphicon glyphicon-heart bg-info"> {{ post.LoveIts }}</span>
+    <span class="pull-right"> {{ post.createdAt | date: 'EEEE-d-MMMM-y hh:mm:s' | uppercase }}</span>
+  </h3>
+  <div>
+    <p class="text-info text-size">
+      {{ post.content }}
+    </p>
+  </div>
+  <div>
+    <button type="button" class="btn btn-success glyphicon glyphicon-thumbs-up" (click)="onLoveIt(post)"></button><span></span>
+    <button type="button" class="btn btn-danger glyphicon glyphicon-thumbs-down" (click)="onDontLoveIt(post)"></button>
+    <button type="button" class="btn btn-danger glyphicon glyphicon-remove-circle pull-right" (click)="onDeletePost(post)"></button>
+  </div>
+</li>
