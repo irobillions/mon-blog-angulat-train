@@ -1,6 +1,9 @@
 # AngularBlogFinal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
+this project is a small blog realised with an exercise of openclassroom with one of their course about how to realise his first 
+application with angular
+I have use bootstrapp version 3.3.7 and firebase for database you can change firebase configuration in the app.component.ts file
 
 ## Development server
 
